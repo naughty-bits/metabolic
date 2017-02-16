@@ -1,0 +1,44 @@
+body { margin: 0; background: black; }
+
+header {
+	animation: header 0.75s;
+	margin: 8px;
+	font: bold medium 'PT Mono';
+	letter-spacing: 0.25em;
+	color: steelblue;
+	user-select: none;
+	cursor: default;
+}
+
+@keyframes header {
+	from { transform: translateX( -100% ); }
+	to { transform: translateX( 0 ); }
+}
+
+header b {
+	vertical-align: middle;
+	font-size: x-large;
+}
+
+main {
+	animation: main 0.75s;
+	min-height: 1.25em;
+	margin: 8px;
+	padding: 8px;
+	background: #202020;
+	border-radius: 2px;
+	color: white;
+}
+
+@keyframes main {
+	from { transform: translateY( -100% ) scale( 0, 0 ); }
+	50% { transform: translateY( 0 ) scale( 0.01, 1 ); }
+	to { transform: scale( 1, 1 ); }
+}
+
+code {
+	/* NOTE: inline-block seems to fix cursor issues in Chrome and FF when emptying text content */
+	display: inline-block;
+	margin: 0.25em;
+	outline: 0;
+}
